@@ -31,12 +31,12 @@ pprint(Diff(a, b).run())
 ```
 输出
 ```
-[{'added': False, 'count': 1, 'removed': True, 'value': 'A'},
- {'added': True, 'count': 1, 'removed': False, 'value': 'C'},
- {'count': 3, 'value': '\nB\n'},
- {'added': False, 'count': 2, 'removed': True, 'value': 'C\n'},
- {'count': 4, 'value': 'A\nB\n'},
- {'added': False, 'count': 2, 'removed': True, 'value': 'B\n'},
- {'count': 2, 'value': 'A\n'},
- {'added': True, 'count': 2, 'removed': False, 'value': 'C\n'}]
+[{'added': False, 'count': 1, 'removed': True, 'value': 'A\n'},
+ {'added': True, 'count': 1, 'removed': False, 'value': 'C\n'},
+ {'count': 1, 'value': 'B\n'},
+ {'added': False, 'count': 1, 'removed': True, 'value': 'C\n'},
+ {'count': 2, 'value': 'A\nB\n'},
+ {'added': False, 'count': 1, 'removed': True, 'value': 'B\n'},
+ {'count': 1, 'value': 'A\n'},
+ {'added': True, 'count': 1, 'removed': False, 'value': 'C\n'}]
 ```
