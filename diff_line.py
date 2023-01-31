@@ -1,5 +1,6 @@
 import re
 
+
 class Diff:
     def __init__(self, old_string, new_string):
         self.old_string = self.remove_empty(self.tokenize(old_string))
@@ -12,6 +13,9 @@ class Diff:
             lines_and_newlines.pop()
 
         for i, line in enumerate(lines_and_newlines):
+            if i % 2:
+                ret_lines[-1] += line
+            else:
                 ret_lines.append(line)
         return ret_lines
 
@@ -61,6 +65,7 @@ class Diff:
 
         old_len = len(old_string)
         new_len = len(new_string)
+        # 编辑长度
         self.edit_len = 1
         max_len = old_len + new_len
 
